@@ -57,11 +57,11 @@ export const footerContent: Record<'ru' | 'en', { copyright: string; privacy: st
   ru: {
     copyright: '© 2026 CodeGuard. AI Development Guardrails.',
     privacy: 'Политика конфиденциальности',
-    contact: 'hello@codeguard.dev',
+    contact: 'dmitry.matora@gmail.com',
   },
   en: {
     copyright: '© 2026 CodeGuard. AI Development Guardrails.',
     privacy: 'Privacy Policy',
-    contact: 'hello@codeguard.dev',
+    contact: 'dmitry.matora@gmail.com',
   },
 };
