@@ -14,12 +14,9 @@ export function FinalCTASection() {
           {content.headline}
         </h2>
         <p className="text-base text-text-secondary mb-10">{content.subheadline}</p>
-        <div className="flex flex-col sm:flex-row gap-3 justify-center">
-          <Button variant="primary" size="lg" href={`mailto:${footer.contact}`}>
-            {content.ctaPrimary}
-          </Button>
-          <Button variant="secondary" size="lg" href={`mailto:${footer.contact}`}>
-            {content.ctaSecondary}
+        <div className="flex justify-center">
+          <Button variant="primary" size="lg" href={footer.telegram} target="_blank" rel="noopener noreferrer">
+            {content.ctaPrimary} {footer.telegramLabel}
           </Button>
         </div>
       </div>

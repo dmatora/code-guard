@@ -6,6 +6,8 @@ interface ButtonProps {
   variant?: 'primary' | 'secondary' | 'ghost';
   size?: 'sm' | 'md' | 'lg';
   href?: string;
+  target?: string;
+  rel?: string;
   onClick?: () => void;
   className?: string;
   type?: 'button' | 'submit';
@@ -16,6 +18,8 @@ export function Button({
   variant = 'primary',
   size = 'md',
   href,
+  target,
+  rel,
   onClick,
   className,
   type = 'button',
@@ -40,7 +44,7 @@ export function Button({
 
   if (href) {
     return (
-      <a href={href} className={cls}>
+      <a href={href} target={target} rel={rel} className={cls}>
         {children}
       </a>
     );

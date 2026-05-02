@@ -21,10 +21,12 @@ export function Footer() {
               {content.privacy}
             </a>
             <a
-              href={`mailto:${content.contact}`}
+              href={content.telegram}
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-xs text-accent-400 hover:text-accent-500 transition-colors font-mono"
             >
-              {content.contact}
+              {content.telegramLabel}
             </a>
           </div>
         </div>

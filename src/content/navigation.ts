@@ -42,7 +42,7 @@ export const finalCtaContent: Record<'ru' | 'en', { headline: string; subheadlin
   ru: {
     headline: 'Готовы разобраться, что происходит в вашем проекте?',
     subheadline: 'Первая консультация — бесплатно. 30 минут. Без обязательств.',
-    ctaPrimary: 'Обсудить проект',
+    ctaPrimary: 'Написать в Telegram',
     ctaSecondary: 'Написать нам',
   },
   en: {
@@ -53,15 +53,17 @@ export const finalCtaContent: Record<'ru' | 'en', { headline: string; subheadlin
   },
 };
 
-export const footerContent: Record<'ru' | 'en', { copyright: string; privacy: string; contact: string }> = {
+export const footerContent: Record<'ru' | 'en', { copyright: string; privacy: string; telegram: string; telegramLabel: string }> = {
   ru: {
     copyright: '© 2026 CodeGuard. AI Development Guardrails.',
     privacy: 'Политика конфиденциальности',
-    contact: 'dmitry.matora@gmail.com',
+    telegram: 'https://t.me/dmatora',
+    telegramLabel: '@dmatora',
   },
   en: {
     copyright: '© 2026 CodeGuard. AI Development Guardrails.',
     privacy: 'Privacy Policy',
-    contact: 'dmitry.matora@gmail.com',
+    telegram: 'https://t.me/dmatora',
+    telegramLabel: '@dmatora',
   },
 };
