@@ -13,6 +13,17 @@ interface AppContextValue {
 
 const AppContext = createContext<AppContextValue | null>(null);
 
+const legacyInvestorDeckPath = /^\/downloads\/codeguard-investor-deck(?:-(?:ru|en))?\.pptx\/?$/i;
+
+function isLegacyInvestorDeckUrl(href: string) {
+  try {
+    const url = new URL(href, window.location.origin);
+    return url.origin === window.location.origin && legacyInvestorDeckPath.test(url.pathname);
+  } catch {
+    return false;
+  }
+}
+
 export function AppProvider({ children }: { children: ReactNode }) {
   const [role, setRoleState] = useState<Role | null>(null);
   const [lang, setLangState] = useState<Lang>('ru');
@@ -29,11 +40,48 @@ export function AppProvider({ children }: { children: ReactNode }) {
       setLangState(browserLang.toLowerCase().startsWith('ru') ? 'ru' : 'en');
     }
 
-    if (savedRole === 'dev' || savedRole === 'cto') {
+    if (savedRole === 'dev' || savedRole === 'cto' || savedRole === 'investor') {
       setRoleState(savedRole);
     }
 
     setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (isLegacyInvestorDeckUrl(window.location.href)) {
+      window.location.replace('/investor-deck/');
+      return;
+    }
+
+    const rewriteLegacyLinks = () => {
+      document.querySelectorAll<HTMLAnchorElement>('a[href]').forEach((link) => {
+        if (isLegacyInvestorDeckUrl(link.href)) {
+          link.href = '/investor-deck/';
+          link.removeAttribute('download');
+        }
+      });
+    };
+
+    const handleClick = (event: MouseEvent) => {
+      if (!(event.target instanceof Element)) return;
+
+      const link = event.target.closest<HTMLAnchorElement>('a[href]');
+      if (!link || !isLegacyInvestorDeckUrl(link.href)) return;
+
+      event.preventDefault();
+      window.location.assign('/investor-deck/');
+    };
+
+    rewriteLegacyLinks();
+
+    const observer = new MutationObserver(rewriteLegacyLinks);
+    observer.observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ['href'] });
+    document.addEventListener('click', handleClick, true);
+
+    return () => {
+      observer.disconnect();
+      document.removeEventListener('click', handleClick, true);
+    };
   }, []);
 
   const setRole = (r: Role) => {

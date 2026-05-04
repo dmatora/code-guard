@@ -21,7 +21,13 @@ export function RolePrimarySection() {
             <p className="text-base text-text-secondary leading-relaxed mb-8">
               {content.description}
             </p>
-            <Button variant="primary" size="md" href="#final-cta">
+            <Button
+              variant="primary"
+              size="md"
+              href={content.ctaHref ?? '#final-cta'}
+              target={content.ctaTarget}
+              rel={content.ctaRel}
+            >
               {content.ctaLabel}
             </Button>
           </div>

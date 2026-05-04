@@ -28,7 +28,7 @@ export function RoleSelector() {
         }}
       />
 
-      <div className="relative z-10 w-full max-w-2xl mx-auto px-6 text-center">
+      <div className="relative z-10 w-full max-w-5xl mx-auto px-6 text-center">
         {/* Logo */}
         <div className="mb-10">
           <div className="flex items-center justify-center gap-2 mb-1">
@@ -48,7 +48,7 @@ export function RoleSelector() {
         </h1>
 
         {/* Role cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <RoleCard
             icon={content.dev.icon}
             title={content.dev.title}
@@ -60,6 +60,12 @@ export function RoleSelector() {
             title={content.cto.title}
             description={content.cto.description}
             onClick={() => handleSelect('cto')}
+          />
+          <RoleCard
+            icon={content.investor.icon}
+            title={content.investor.title}
+            description={content.investor.description}
+            onClick={() => handleSelect('investor')}
           />
         </div>
       </div>

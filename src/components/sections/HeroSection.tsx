@@ -40,10 +40,22 @@ export function HeroSection() {
 
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row gap-3 justify-center mb-16">
-          <Button variant="primary" size="lg" href="#final-cta">
+          <Button
+            variant="primary"
+            size="lg"
+            href={content.ctaPrimaryHref ?? '#final-cta'}
+            target={content.ctaPrimaryTarget}
+            rel={content.ctaPrimaryRel}
+          >
             {content.ctaPrimary}
           </Button>
-          <Button variant="secondary" size="lg" href="#audit">
+          <Button
+            variant="secondary"
+            size="lg"
+            href={content.ctaSecondaryHref ?? '#audit'}
+            target={content.ctaSecondaryTarget}
+            rel={content.ctaSecondaryRel}
+          >
             {content.ctaSecondary}
           </Button>
         </div>

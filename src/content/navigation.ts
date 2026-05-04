@@ -3,7 +3,7 @@ interface NavContent {
   items: Array<{ label: string; href: string }>;
   ctaLabel: string;
   langToggle: { ru: string; en: string };
-  roleLabel: { dev: string; cto: string };
+  roleLabel: { dev: string; cto: string; investor: string };
   changeRole: string;
 }
 
@@ -19,7 +19,7 @@ export const navigationContent: Record<'ru' | 'en', NavContent> = {
     ],
     ctaLabel: 'Обсудить проект',
     langToggle: { ru: 'RU', en: 'EN' },
-    roleLabel: { dev: 'Разработчик', cto: 'Руководитель' },
+    roleLabel: { dev: 'Разработчик', cto: 'Руководитель', investor: 'Инвестор' },
     changeRole: 'Сменить роль',
   },
   en: {
@@ -33,7 +33,7 @@ export const navigationContent: Record<'ru' | 'en', NavContent> = {
     ],
     ctaLabel: 'Discuss project',
     langToggle: { ru: 'RU', en: 'EN' },
-    roleLabel: { dev: 'Developer', cto: 'Manager' },
+    roleLabel: { dev: 'Developer', cto: 'Manager', investor: 'Investor' },
     changeRole: 'Change role',
   },
 };

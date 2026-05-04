@@ -13,6 +13,11 @@ export const roleSelectorContent: Record<'ru' | 'en', RoleSelectorContent> = {
       title: 'Я руководитель / CTO',
       description: 'Хочу контролировать качество кода при использовании ИИ',
     },
+    investor: {
+      icon: '📈',
+      title: 'Я инвестор',
+      description: 'Хочу понять, управляем ли AI-generated code как актив и риск',
+    },
   },
   en: {
     heading: 'Who are you in this story?',
@@ -25,6 +30,11 @@ export const roleSelectorContent: Record<'ru' | 'en', RoleSelectorContent> = {
       icon: '👔',
       title: "I'm a Manager / CTO",
       description: 'I want to control code quality when using AI',
+    },
+    investor: {
+      icon: '📈',
+      title: "I'm an Investor",
+      description: 'I want to assess whether AI-generated code is governed as an asset and a risk',
     },
   },
 };

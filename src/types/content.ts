@@ -1,5 +1,5 @@
 export type Lang = 'ru' | 'en';
-export type Role = 'dev' | 'cto';
+export type Role = 'dev' | 'cto' | 'investor';
 
 export interface HeroContent {
   badge: string;
@@ -7,6 +7,12 @@ export interface HeroContent {
   subheadline: string;
   ctaPrimary: string;
   ctaSecondary: string;
+  ctaPrimaryHref?: string;
+  ctaPrimaryTarget?: string;
+  ctaPrimaryRel?: string;
+  ctaSecondaryHref?: string;
+  ctaSecondaryTarget?: string;
+  ctaSecondaryRel?: string;
 }
 
 export interface HeroMetric {
@@ -19,6 +25,7 @@ export interface RoleSelectorContent {
   heading: string;
   dev: { icon: string; title: string; description: string };
   cto: { icon: string; title: string; description: string };
+  investor: { icon: string; title: string; description: string };
 }
 
 export interface ThreeWayColumn {
@@ -68,6 +75,9 @@ export interface RolePrimaryContent {
   description: string;
   benefits: BenefitItem[];
   ctaLabel: string;
+  ctaHref?: string;
+  ctaTarget?: string;
+  ctaRel?: string;
 }
 
 export interface ComparisonRow {
