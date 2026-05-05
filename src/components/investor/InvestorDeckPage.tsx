@@ -36,6 +36,14 @@ const content: Record<Lang, {
       signals: Metric[];
       sources: Array<{ label: string; href: string }>;
     };
+    marketSize: {
+      eyebrow: string;
+      title: string;
+      body: string;
+      signals: Metric[];
+      scenarios: Array<{ title: string; body: string }>;
+      sources: Array<{ label: string; href: string }>;
+    };
     problem: {
       eyebrow: string;
       title: string;
@@ -117,18 +125,44 @@ const content: Record<Lang, {
         eyebrow: 'Market Timing',
         title: 'AI забирает венчурный капитал. AI coding стал самым очевидным application-layer wedge.',
         body:
-          'Инвестор, который хочет экспозицию к AI coding, не должен финансировать ещё один Codex или Claude Code: этот рынок уже стал полем гигантов. CodeGuard даёт другой вход в ту же волну — не конкурировать с фабриками кода, а стать независимым аудитором их output.',
+          'Публичные источники пока не дают чистого global breakout всего $170.9B private investment по software subcategories. Но даже минимальный публичный floor уже показателен: только Cursor и Cognition раскрыли более $3.7B funding в 2025. То есть капитал уже подтвердил AI coding как стратегический wedge. Следующий логичный слой над ним — независимый аудит и governance.',
         signals: [
           { value: '61%', label: 'global VC', note: 'доля AI-компаний во всём VC deal value в 2025' },
           { value: '$170.9B', label: 'GenAI private investment', note: 'глобальные частные инвестиции в generative AI в 2025' },
-          { value: '90%', label: 'developers using AI at work', note: 'JetBrains AI Pulse, январь 2026' },
+          { value: '$3.7B+', label: 'AI coding funding floor', note: 'публично раскрытые раунды 2025 у Cursor + Cognition' },
           { value: '74%', label: 'specialized AI dev tools', note: 'coding assistants, AI editors и agents уже в рабочем toolchain' },
         ],
         sources: [
           { label: 'OECD AI VC 2026', href: 'https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/02/venture-capital-investments-in-artificial-intelligence-through-2025_3bcb227f/a13752f5-en.pdf' },
           { label: 'Stanford AI Index 2026', href: 'https://hai.stanford.edu/assets/files/ai_index_report_2026_chapter_4_economy.pdf' },
+          { label: 'Cursor Series B', href: 'https://cursor.com/blog/series-b' },
+          { label: 'Cursor Series C', href: 'https://cursor.com/blog/series-c' },
+          { label: 'Cursor Series D', href: 'https://cursor.com/blog/series-d' },
+          { label: 'Cognition 2025 round', href: 'https://techcrunch.com/2025/09/08/cognition-ai-defies-turbulence-with-a-400m-raise-at-10-2b-valuation/' },
           { label: 'JetBrains AI Pulse 2026', href: 'https://blog.jetbrains.com/research/2026/04/which-ai-coding-tools-do-developers-actually-use-at-work/' },
+        ],
+      },
+      marketSize: {
+        eyebrow: 'Bottom-Up Market',
+        title: 'CodeGuard не нужен trillion-dollar AI TAM. Достаточно маленькой доли AI-heavy engineering orgs.',
+        body:
+          'Для нашей услуги честнее считать рынок снизу вверх. GitHub уже говорит о 4M+ organizations и 180M+ developers. Если внешнюю архитектурную дисциплину покупает даже 0.25%-1% этой базы, при нашем target year-1 ACV в $145k получается рынок в миллиарды долларов без натяжки и без войны за mass-market IDE seat.',
+        signals: [
+          { value: '4M+', label: 'GitHub organizations', note: 'официальная база организаций на платформе GitHub' },
+          { value: '180M+', label: 'developers', note: 'официальная база разработчиков на GitHub' },
+          { value: '$145k', label: 'year-1 ACV target', note: 'audit + 12 месяцев immunization retainer' },
+          { value: '$1.45B-$5.8B', label: 'implied market wedge', note: 'если buyer fit есть лишь у 0.25%-1% GitHub orgs' },
+        ],
+        scenarios: [
+          { title: 'Conservative wedge', body: '10k организаций = 0.25% GitHub orgs. При $145k year-1 ACV это ~$1.45B.' },
+          { title: 'Base case', body: '20k организаций = 0.5% GitHub orgs. При $145k year-1 ACV это ~$2.9B.' },
+          { title: 'Expanded wedge', body: '40k организаций = 1% GitHub orgs. При $145k year-1 ACV это ~$5.8B.' },
+        ],
+        sources: [
+          { label: 'GitHub About', href: 'https://github.com/about' },
           { label: 'GitHub Octoverse 2025', href: 'https://github.blog/news-insights/octoverse/octoverse-a-new-developer-joins-github-every-second-as-ai-leads-typescript-to-1/' },
+          { label: 'Stack Overflow 2025', href: 'https://stackoverflow.co/company/press/archive/stack-overflow-2025-developer-survey/' },
+          { label: 'JetBrains AI Pulse 2026', href: 'https://blog.jetbrains.com/research/2026/04/which-ai-coding-tools-do-developers-actually-use-at-work/' },
         ],
       },
       problem: {
@@ -300,18 +334,44 @@ const content: Record<Lang, {
         eyebrow: 'Market Timing',
         title: 'AI is absorbing venture capital. AI coding is the clearest application-layer wedge.',
         body:
-          'An investor seeking exposure to AI coding should not fund another Codex or Claude Code competitor: that market is already a giants’ battleground. CodeGuard offers a different entry into the same wave — do not compete with code factories; become the independent auditor of their output.',
+          'Public datasets do not yet provide a clean global breakout of the full $170.9B private-investment pool by software subcategory. But the public floor is already meaningful: Cursor and Cognition alone disclosed more than $3.7B of funding in 2025. Capital has already validated AI coding as a strategic wedge. The next logical layer is independent audit and governance.',
         signals: [
           { value: '61%', label: 'global VC', note: 'AI companies’ share of all VC deal value in 2025' },
           { value: '$170.9B', label: 'GenAI private investment', note: 'global private investment in generative AI in 2025' },
-          { value: '90%', label: 'developers using AI at work', note: 'JetBrains AI Pulse, January 2026' },
+          { value: '$3.7B+', label: 'AI coding funding floor', note: 'publicly disclosed 2025 rounds from Cursor + Cognition' },
           { value: '74%', label: 'specialized AI dev tools', note: 'coding assistants, AI editors, and agents already in the work toolchain' },
         ],
         sources: [
           { label: 'OECD AI VC 2026', href: 'https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/02/venture-capital-investments-in-artificial-intelligence-through-2025_3bcb227f/a13752f5-en.pdf' },
           { label: 'Stanford AI Index 2026', href: 'https://hai.stanford.edu/assets/files/ai_index_report_2026_chapter_4_economy.pdf' },
+          { label: 'Cursor Series B', href: 'https://cursor.com/blog/series-b' },
+          { label: 'Cursor Series C', href: 'https://cursor.com/blog/series-c' },
+          { label: 'Cursor Series D', href: 'https://cursor.com/blog/series-d' },
+          { label: 'Cognition 2025 round', href: 'https://techcrunch.com/2025/09/08/cognition-ai-defies-turbulence-with-a-400m-raise-at-10-2b-valuation/' },
           { label: 'JetBrains AI Pulse 2026', href: 'https://blog.jetbrains.com/research/2026/04/which-ai-coding-tools-do-developers-actually-use-at-work/' },
+        ],
+      },
+      marketSize: {
+        eyebrow: 'Bottom-Up Market',
+        title: 'CodeGuard does not need a trillion-dollar AI TAM. It needs a small share of AI-heavy engineering organizations.',
+        body:
+          'For our service, a bottom-up market model is more honest than quoting the entire AI economy. GitHub already reports 4M+ organizations and 180M+ developers. If only 0.25%-1% of that organization base buys external architectural discipline, our target year-1 ACV of $145k already supports a multibillion-dollar wedge without fighting for a mass-market IDE seat.',
+        signals: [
+          { value: '4M+', label: 'GitHub organizations', note: 'official organization base on the GitHub platform' },
+          { value: '180M+', label: 'developers', note: 'official developer base on GitHub' },
+          { value: '$145k', label: 'year-1 ACV target', note: 'audit + 12 months of immunization retainer' },
+          { value: '$1.45B-$5.8B', label: 'implied market wedge', note: 'if buyer fit exists in only 0.25%-1% of GitHub orgs' },
+        ],
+        scenarios: [
+          { title: 'Conservative wedge', body: '10k organizations = 0.25% of GitHub orgs. At $145k year-1 ACV, that is ~$1.45B.' },
+          { title: 'Base case', body: '20k organizations = 0.5% of GitHub orgs. At $145k year-1 ACV, that is ~$2.9B.' },
+          { title: 'Expanded wedge', body: '40k organizations = 1% of GitHub orgs. At $145k year-1 ACV, that is ~$5.8B.' },
+        ],
+        sources: [
+          { label: 'GitHub About', href: 'https://github.com/about' },
           { label: 'GitHub Octoverse 2025', href: 'https://github.blog/news-insights/octoverse/octoverse-a-new-developer-joins-github-every-second-as-ai-leads-typescript-to-1/' },
+          { label: 'Stack Overflow 2025', href: 'https://stackoverflow.co/company/press/archive/stack-overflow-2025-developer-survey/' },
+          { label: 'JetBrains AI Pulse 2026', href: 'https://blog.jetbrains.com/research/2026/04/which-ai-coding-tools-do-developers-actually-use-at-work/' },
         ],
       },
       problem: {
@@ -513,6 +573,40 @@ export function InvestorDeckPage() {
                 </a>
               ))}
             </div>
+          </div>
+        </div>
+      </DeckSection>
+
+      <DeckSection eyebrow={data.sections.marketSize.eyebrow} title={data.sections.marketSize.title}>
+        <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
+          <div>
+            <p className="text-base leading-8 text-text-secondary">{data.sections.marketSize.body}</p>
+            <div className="mt-8 grid gap-3 sm:grid-cols-2">
+              {data.sections.marketSize.signals.map((signal) => (
+                <MetricTile key={`${signal.value}-${signal.label}`} metric={signal} />
+              ))}
+            </div>
+            <div className="mt-6 flex flex-wrap gap-2">
+              {data.sections.marketSize.sources.map((source) => (
+                <a
+                  key={source.href}
+                  href={source.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded border border-border-default px-3 py-1.5 text-xs font-medium text-text-secondary transition-colors hover:border-accent-500 hover:text-accent-400"
+                >
+                  {source.label}
+                </a>
+              ))}
+            </div>
+          </div>
+          <div className="space-y-4">
+            {data.sections.marketSize.scenarios.map((scenario) => (
+              <div key={scenario.title} className="rounded-lg border border-border-default bg-bg-surface p-5">
+                <h3 className="text-lg font-semibold text-text-primary">{scenario.title}</h3>
+                <p className="mt-2 text-sm leading-7 text-text-secondary">{scenario.body}</p>
+              </div>
+            ))}
           </div>
         </div>
       </DeckSection>

@@ -50,7 +50,9 @@ Use these as sourced market anchors, not as proof of CodeGuard revenue:
 
 - AI firms captured `61%` of global VC investment in 2025, equal to `$258.7B` of `$427.1B` total VC deal value, according to OECD.
 - Stanford AI Index 2026 reports `$170.9B` in global private investment in generative AI in 2025.
-- Stanford also highlights Anysphere's `$2.3B` round at a `$29.3B` valuation as evidence of capital concentration in AI-coding infrastructure.
+- Cursor disclosed three 2025 rounds on its own blog: `$105M` Series B in January, `$900M` Series C in June, and `$2.3B` Series D in November, totaling `$3.305B` in one year.
+- Cognition disclosed a further `$400M` round in September 2025 at a `$10.2B` valuation.
+- That gives a public 2025 floor of `$3.7B+` into AI coding leaders from just Cursor and Cognition alone, before counting undisclosed rounds, acquisitions, or private transactions.
 - GitHub Octoverse 2025 reports `180M+` developers on GitHub, `4.3M` AI-related repositories, `80%` of new developers using Copilot within their first week, and `+178% YoY` growth in public repositories importing LLM SDKs.
 - JetBrains AI Pulse January 2026 reports `90%` of developers regularly used at least one AI tool at work for coding and development tasks, and `74%` had adopted specialized AI developer tools such as coding assistants, AI editors, and agents.
 - Stack Overflow 2025 reports `84%` of respondents use or plan to use AI tools in development, while trust and sentiment have declined. This is the demand/control gap CodeGuard monetizes.
@@ -58,8 +60,31 @@ Use these as sourced market anchors, not as proof of CodeGuard revenue:
 Investment inference:
 - The AI capital wave is already obvious.
 - AI coding is already commercially validated.
+- Public data does not yet provide a clean global breakout of the full `$170.9B` GenAI investment pool by software subcategory.
+- But a disclosed `$3.7B+` floor into AI coding leaders is already large enough to prove serious capital concentration.
 - Direct code-factory competition is overexposed to giants.
 - The investable gap is the independent control layer above AI-generated code.
+
+## Bottom-Up Market Model
+
+Do not present a fake top-down TAM for "AI governance."
+Use an assumption-driven service market model instead.
+
+Inputs:
+- GitHub reports `4M+` organizations and `180M+` developers on the platform.
+- Stack Overflow reports `84%` of developers use or plan to use AI tools.
+- JetBrains reports `74%` of developers have already adopted specialized AI developer tools.
+- CodeGuard target year-1 ACV: `$145k` (`$25k audit + 12 x $10k retainer`).
+
+Sensitivity model:
+- `0.25%` of GitHub organizations = `10k` potential buyers -> `~$1.45B`
+- `0.5%` of GitHub organizations = `20k` potential buyers -> `~$2.9B`
+- `1.0%` of GitHub organizations = `40k` potential buyers -> `~$5.8B`
+
+Why this framing works:
+- It does not pretend every developer team is a buyer.
+- It frames CodeGuard as a premium service sold to a small, high-risk, high-value slice of the market.
+- It matches the moat thesis: limited expert throughput can still support a very large business.
 
 ## Narrative Spine
 
@@ -98,6 +123,7 @@ Punchline:
 Core points:
 - AI took `61%` of global VC deal value in 2025.
 - Generative AI private investment reached `$170.9B` globally.
+- Publicly disclosed AI coding funding alone exceeded `$3.7B` in 2025 from Cursor and Cognition before counting undisclosed deals.
 - AI coding is moving from experiment to default workflow: `90%` developer AI usage at work and `74%` adoption of specialized AI dev tools in JetBrains AI Pulse.
 - The strategic trap: funding another coding agent means competing with Microsoft, OpenAI, Anthropic, GitHub, and Cursor.
 - The strategic opening: fund the audit layer above them.
@@ -106,7 +132,7 @@ Visual:
 - Four metric tiles:
   - `61% global VC`
   - `$170.9B GenAI private investment`
-  - `90% developer AI usage at work`
+  - `$3.7B+ disclosed AI coding funding`
   - `74% specialized AI dev tool adoption`
 - Right-side thesis box:
   `Do not fund another code factory. Fund the independent auditor of code factories.`
@@ -180,7 +206,28 @@ Visual:
   - `Execution layer`: PRs, AI agents, team workflow.
 - Feedback loop: `Finding -> Risk decision -> Project Guardrail -> Lower future entropy`.
 
-### Slide 7. Tech-Enabled Throughput
+### Slide 7. Bottom-Up Market
+
+Punchline:
+`CodeGuard does not need a trillion-dollar TAM. It needs a small share of AI-heavy engineering organizations.`
+
+Core points:
+- GitHub already reports `4M+` organizations and `180M+` developers.
+- AI use is already mainstream, but external architectural arbitration is only relevant to a narrow, high-value subset.
+- If only `0.25%-1%` of GitHub organizations become buyers, the implied market is `$1.45B-$5.8B` at our target year-1 ACV.
+
+Visual:
+- Left: four tiles
+  - `4M+ organizations`
+  - `180M+ developers`
+  - `$145k year-1 ACV`
+  - `$1.45B-$5.8B implied wedge`
+- Right: three scenario cards
+  - `10k orgs -> $1.45B`
+  - `20k orgs -> $2.9B`
+  - `40k orgs -> $5.8B`
+
+### Slide 8. Tech-Enabled Throughput
 
 Punchline:
 `One architect-day can replace a month of traditional senior-team audit work.`
@@ -195,7 +242,7 @@ Visual:
 - Right side: CodeGuard expert + AI exoskeleton.
 - Metric callout: `2.5M tokens -> 1 day -> decision-ready map`.
 
-### Slide 8. Tech-Enabled Margin
+### Slide 9. Tech-Enabled Margin
 
 Punchline:
 `$25k audit with ~$4k COGS: consulting price, software-like leverage.`
@@ -212,16 +259,18 @@ Visual:
   - Client price: `$25k`.
 - Highlight both buyer surplus and CodeGuard margin.
 
-### Slide 9. Project Immunization
+### Slide 10. Project Immunization / Retainer Flywheel
 
 Punchline:
-`We do not sell hours. We sell Project Immunization.`
+`We do not sell hours. We sell Project Immunization, and the retainer is how it compounds.`
 
 Core points:
 - First audit is expensive expert attention.
 - Findings become Project Guardrails.
 - Guardrails reduce repeated mistakes and future manual effort.
 - Client keeps paying for assurance, reporting, and high-stakes arbitration.
+- The audit lands the account; the operating standard retains it.
+- Year-1 LTV target remains `$145k`.
 
 Visual:
 - Dual-axis chart:
@@ -230,20 +279,8 @@ Visual:
   - Retainer line stays flat.
 - Label the spread as margin expansion.
 
-### Slide 10. Retainer Flywheel
-
-Punchline:
-`The audit lands the account. The operating standard retains it.`
-
-Core points:
-- Trigger audit: `$25k`.
-- Immunization retainer: `$10k/month`.
-- Year-1 LTV target: `$145k`.
-- Retainer work becomes lighter as project context and guardrails accumulate.
-
-Visual:
-- Flywheel:
-  `Audit -> Findings -> Guardrails -> Cleaner AI output -> Reporting -> More trust -> Retainer renewal`.
+Add flywheel annotation:
+`Audit -> Findings -> Guardrails -> Cleaner AI output -> Reporting -> More trust -> Retainer renewal`
 
 ### Slide 11. Defensibility
 
